@@ -1,0 +1,64 @@
+.bascet{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-bascet{    
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+    width: 60%;
+    
+    &__wrapper{
+        display: flex;
+        column-gap: rem(10);
+        align-items: center;
+        justify-content: space-between;
+        border: rem(1) solid var(--color-light-gray);
+        border-radius: rem(14);
+        padding: rem(20);
+    }
+
+    &__info{
+        display: flex;
+        column-gap: rem(10);
+    }
+
+    &__description{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__img{
+        border-radius: rem(14);
+        width: rem(225);
+        height: rem(125);
+    }
+
+    &__price{
+        color: var(--color-accent);
+    }
+}
+
+.desc--c{
+    color: var(--color-light-gray);
+}
+
+.sumProduct{
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(30);
+    align-items: center;       
+    width: 35%;
+    
+    &__title{
+        font-size: rem(40);
+        font-family: var(--f-f-logo);
+    }
+    
+    &__price{
+        color: var(--color-accent);
+        font-size: rem(60);
+    }
+}

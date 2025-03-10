@@ -1,0 +1,41 @@
+.conteiner{
+    max-width: calc(var(--conteiner-max-width) + var(--conteiner-padding-x) * 2);
+    padding-inline: var(--conteiner-padding-x);
+    margin-inline: auto;
+        
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;    
+}
+
+.hidden-mobile{
+    @include mobile{
+        display: none !important;
+    }
+}
+
+.visualli-mobile{
+    @include forVisualliMobile{
+        display: none !important;
+    }
+}
+
+.btn-reset{
+    border: none;
+    background-color: transparent;  
+    color: var(--color-light); 
+    padding: 0;   
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}

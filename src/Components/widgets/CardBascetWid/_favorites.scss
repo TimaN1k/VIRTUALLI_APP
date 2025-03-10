@@ -1,0 +1,9 @@
+.favdel{
+    display: flex;
+    column-gap: rem(10); 
+    
+    
+    &__btn{
+        cursor: pointer;
+    }
+}

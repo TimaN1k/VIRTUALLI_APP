@@ -1,0 +1,35 @@
+
+.around{    
+    background-image: url('/img/aroundBack.jpg');
+    height: 100%;    
+    
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 47%; 
+        padding: rem(40) rem(0) rem(40) rem(30);       
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(15);
+    }
+
+    &__title{
+        font-weight: 600;
+        font-family: var(--f-f-logo);
+        font-size: rem(35);
+        
+    }
+
+    &__text{
+        font-size: rem(16);
+        line-height: rem(16);
+    }
+
+    &__btn{
+        max-width: rem(220);
+    }
+}

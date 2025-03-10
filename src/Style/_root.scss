@@ -1,0 +1,41 @@
+:root{
+    --color-light: #FFF;
+    --color-dark: #000;
+    --color-light-gray: #6B6B6B;      
+    --color-accent: #B109BA;  
+    --color-background-body: #151718;
+    --color-partners-inner: #6D6D6D;
+    --c-footer-bac: #141414;
+
+    --conteiner-max-width: 75rem;
+    --conteiner-padding-x: 3.5rem;
+
+    --hero-width: 64.25rem;
+    --hero-height: 29rem;
+    --hero-pad: 0 0 5rem 3.75rem;    
+    --hero-card-pad: 0 0 0.9375rem 1.5625rem;
+    --hero-card-width: 12.5rem;
+
+    --border-r-base: 0.875rem;
+    --border-card: 0.0625rem solid var(--color-light-gray);
+
+    --around-pad: 1.875rem 0 1.875rem 1.875rem;
+
+    --button-r: 1.875rem;
+    --button-padding: 0.9375rem 0.625rem;
+    --btn-burger-width: 1.625rem;
+    --btn-burger-height: 1.25rem;
+
+    --font-family-base: 'Comic Sans MS';
+    --font-family-helvetica: 'Helvetica';
+    --f-f-logo: "Roboto Condensed";
+    --f-f-title: "PT Sans Narrow"; 
+
+    --box-shadow-circle-inset: inset -2px -2px 4px hsla(0, 0%, 100%, .1), inset 2px 2px 4px rgba(0, 0, 0, .5);     
+    --box-shadow-3: -4px -4px 12px hsla(0, 0%, 100%, .05), 4px 4px 12px var(--color-dark);
+    --box-shadow-3-transparent: -4px -4px 12px hsla(0, 0%, 100%, 0), 4px 4px 12px transparent;
+    --box-shadow-inset-transparent: inset -22px -14px 14px 2px hsla(0, 0%, 100%, 0), inset 8px 4px 20px 12px transparent;
+    --box-shadow-inset: inset -22px -14px 14px 2px hsla(0, 0%, 100%, .015), inset 8px 4px 20px 12px rgba(0, 0, 0, .8);
+    
+    --transition-duration: 0.2s;    
+}

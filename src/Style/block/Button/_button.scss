@@ -1,0 +1,17 @@
+.button{       
+    background-size: 300% 100%;
+    color: var(--color-light);
+    border: none;
+    border-radius: var(--button-r);
+    padding: var(--button-padding);    
+    font-size: rem(16);  
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed); 
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75); 
+    transition: all var(--transition-duration) ease-in-out;
+    cursor: pointer; 
+
+    @include hover{
+        background-position: 100% 0;
+        transition: all var(--transition-duration) ease-in-out;
+    }
+}

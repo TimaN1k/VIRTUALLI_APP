@@ -1,0 +1,76 @@
+.hero{
+    margin-top: rem(30);
+    margin-bottom: rem(60);
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__user-attention{
+        background-image: url("/img/GIRLSUDA.jpg");
+        width: var(--hero-width);
+        height: var(--hero-height); 
+        align-items: end;                   
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;        
+        row-gap: rem(20);
+        padding: var(--hero-pad); 
+    }
+
+    &__title{
+        text-transform: uppercase;
+        font-family: var(--f-f-title);
+        font-size: rem(43);
+        line-height: rem(40);           
+    }
+
+    &__text{
+        color: var(--color-light-gray);
+        font-size: rem(18);
+        line-height: rem(18); 
+        max-width: 80%;               
+    }    
+
+    &__inner--smoll{
+        max-width: rem(450);
+    }  
+
+    &__btn{
+        max-width: rem(150);
+    }
+
+    &__product{
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: rem(20);
+        font-family: var(--f-f-title);       
+    }
+
+    &__card-apple{        
+        background-image: url('/img/AppleVisionPro.jpg');
+    }
+
+    &__card-focus{
+        background-image: url('/img/HTCViveFocus3.png');
+    }
+
+    &__card-index{
+        background-image: url('/img/ValveIndexVrKit.jpeg');
+    }
+
+    &__card--size{
+        padding: var(--hero-card-pad);
+        width: var(--hero-card-width);
+    }
+
+    &__card__name-product{
+        max-width: 100%;        
+        font-size: rem(16);        
+    }
+
+}
+

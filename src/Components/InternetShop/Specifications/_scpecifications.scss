@@ -1,0 +1,29 @@
+.spfic{      
+     
+    
+    &__wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: rem(30);
+        height: 100%;  
+    }
+
+    &__card{     
+        justify-content: center;          
+        align-items: center;
+        row-gap: rem(10);
+        padding: rem(30);             
+    }
+
+    &__meaning{
+        font-size: rem(45);
+        font-family: var(--f-f-logo);
+        font-weight: 700;
+    }
+
+    &__description{
+        color: var(--color-light-gray);
+        font-size: rem(18);
+    }
+}

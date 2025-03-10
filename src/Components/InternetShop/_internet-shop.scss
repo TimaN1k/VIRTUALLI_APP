@@ -1,0 +1,30 @@
+.shop{
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(50);
+    
+    
+    &__wrapper{
+        display: grid;
+        grid-template-rows: repeat(3, rem(364));
+        gap: rem(50);          
+    }
+    
+    &__top{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr;       
+        gap: rem(30);  
+              
+    }
+
+    &__title{
+        font-family: var(--f-f-title);
+        font-size: rem(40);
+        text-transform: uppercase;        
+    }
+
+    &__spfic{
+        height: 100%;
+    }
+}

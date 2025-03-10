@@ -1,0 +1,105 @@
+.footer{    
+    color: var(--color-light-gray);
+    background-color: var(--c-footer-bac);
+    padding: rem(80) rem(0) rem(80) rem(40);
+    line-height: rem(18);
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo{
+        max-width: rem(100);    
+        font-family: var(--f-f-logo);   
+        display: flex;
+                
+    }
+
+    &__leftPart{
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__text{
+        max-width: rem(364);
+    }
+
+    &__confidence{
+        display: flex;
+        column-gap: rem(60);
+        align-items: center;
+    }
+
+    &__iconContact{
+        display: flex;
+        align-items: center;
+        column-gap: rem(10);
+    }
+
+    &__rightPart{
+        display: flex;
+        column-gap: rem(70);
+        padding-bottom: rem(60);        
+    }
+
+    &__menu{
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(30);
+    }
+
+    &__title{
+        color: var(--color-light);
+        font-size: rem(25);
+    }
+
+    &__icon{
+        transition-duration: var(--transition-duration); 
+        width: rem(50);
+        height: rem(50);
+        border-radius: 50%;
+        border: rem(1) solid transparent;
+        box-shadow: var(--box-shadow-circle-inset);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        @include hover{
+            border-color: var(--color-accent);
+        }
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(15);
+    }
+
+    &__item{
+        max-width: rem(276);
+    }
+
+    &__link{      
+
+        @include hover{
+            color: var(--color-accent);             
+        }
+    }
+
+    &__political{
+        cursor: pointer;
+        transition-duration: var(--transition-duration);
+
+        @include hover{            
+            color: var(--color-accent);
+        }
+    }
+
+    &__list--big-gap{
+        row-gap: rem(20);
+    }    
+}

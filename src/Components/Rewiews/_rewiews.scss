@@ -1,0 +1,64 @@
+
+.rewiews{
+    padding-top: rem(100);
+    
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(40);        
+    }
+
+    &__title{
+        font-size: rem(40);
+        font-family: var(--f-f-logo);
+    }
+
+    &__commentPath{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: rem(40);
+        color: var(--color-light-gray);
+    }
+
+    &__commentCard{
+        border: rem(1) solid var(--color-light-gray);
+        row-gap: rem(10);
+        justify-content: space-between;        
+        padding: rem(30);      
+    }
+
+    &__stars{
+        color: var(--color-accent);
+    }
+
+    &__user{
+        display: flex;
+        column-gap: rem(10);        
+        align-items: center;
+    }
+
+    &__text{
+        font-size: rem(18);
+        line-height: rem(20);
+    }
+
+    &__img{
+        background-color: var(--color-light);
+        border-radius: 50%;
+        width: rem(50);
+        height: rem(50);
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;        
+    }
+
+    &__name{
+        color: var(--color-light);        
+    }
+
+    &__product{
+        font-size: rem(16);
+    }
+}

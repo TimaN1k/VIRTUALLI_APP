@@ -1,0 +1,31 @@
+.partners{
+    padding: rem(75) rem(0);
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(60);
+    }
+
+    &__title{
+        font-size: rem(40);
+        font-family: var(--f-f-logo);
+    }
+
+    &__logotips{
+        display: flex;
+        flex-direction: column;        
+    }
+
+    &__top-logotips{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__bot-logotips{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}

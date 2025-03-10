@@ -1,0 +1,39 @@
+.feel{
+    border: var(--border-card);    
+    border-radius: var(--border-r-base);
+    
+    &__wrapper{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        height: 100%;        
+    }
+
+    &__userAtent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: rem(70);        
+        row-gap: rem(20);
+    }
+
+    &__title{
+        font-family: var(--f-f-title);
+        text-transform: uppercase;
+        font-size: rem(43);
+               
+    }
+
+    &__text{
+        color: var(--color-light-gray);
+        font-size: rem(23); 
+        max-width: 60%;
+    }
+
+    &__vr-illustration{
+        border-radius: var(--border-r-base);
+        background-image: url('/img/feelIMG.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;       
+    }
+}

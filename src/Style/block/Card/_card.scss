@@ -1,0 +1,10 @@
+.card{
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    border-radius: var(--border-r-base); 
+    text-transform: uppercase;    
+}

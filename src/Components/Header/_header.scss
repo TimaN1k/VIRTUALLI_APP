@@ -1,0 +1,122 @@
+.header{          
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;        
+        align-items: center;
+        min-height: rem(80);
+    }
+
+    &__navigation{
+        display: flex;
+        column-gap: rem(170);
+        align-items: center;
+
+        @include tablet{
+            column-gap: rem(70);
+        }
+    }
+
+    &__logo{
+        font-family: var(--f-f-logo);
+        display: flex;       
+        
+        @include tablet{
+            font-size: rem(16);
+        }
+    }  
+    
+    &__search{
+        background-color: inherit;
+        outline: none;
+        width: rem(300);
+        padding: rem(10);
+        border: rem(1) solid var(--color-light-gray);
+        color: var(--color-light);        
+        border-radius: rem(14);        
+    }
+
+    &__list{
+        display: flex;
+        column-gap: rem(20);
+        align-items: center;
+        color: var(--color-light-gray);
+
+        @include tablet{
+            column-gap: rem(10);
+        }
+    }
+
+    &__link{
+        font-size: rem(18); 
+        
+        @include hover{
+            color: var(--color-accent);
+        }
+
+        @include tablet{
+            font-size: rem(14);
+        }
+    }   
+
+    &__inner{
+        display: flex;
+        column-gap: rem(20);
+        align-items: center;
+
+        @include tablet{
+            column-gap: rem(10);
+        }
+    }   
+
+    &__icon{
+        cursor: pointer;
+        stroke: var(--color-light); 
+        @include hover{
+            stroke: var(--color-accent);
+        }       
+
+        @include tablet{
+            width: rem(18);
+            height: rem(18);
+        }
+    }
+
+    &__product-counter{
+        position: relative;       
+    }
+
+    &__burger-btn{
+        position: relative;
+        width: var(--btn-burger-width);
+        height: var(--btn-burger-height);        
+        
+
+        &::after{
+            @include burger-line();
+            
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;            
+            box-shadow: 0 rem(4), 0 rem(-4);
+        }
+    }
+}
+
+.bascetIndication{
+    position: absolute;
+    top: rem(-2);
+    left: 55%;
+    width: rem(10);
+    height: rem(10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    font-size: rem(10);
+    padding: rem(3);    
+}
+
+
+

@@ -1,0 +1,10 @@
+.shadow{
+    transition-duration: var(--transition-duration);
+    --shadowBefore: var(--box-shadow-3), var(--box-shadow-inset-transparent);
+    --shadowAfter: var(--box-shadow-3-transparent), var(--box-shadow-inset);
+    box-shadow: var(--shadowBefore);
+
+    @include hover{
+        box-shadow: var(--shadowAfter);
+    }
+}

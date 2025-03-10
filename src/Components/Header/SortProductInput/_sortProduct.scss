@@ -1,0 +1,15 @@
+.sort{    
+    border: rem(1) solid var(--color-light-gray); 
+    width: 25%;
+    border-radius: rem(14);
+    padding: rem(5) rem(10);
+    display: flex;
+    align-items: center;
+
+    &__input{
+        background-color: inherit;
+        outline: none;
+        border: none;
+        color: var(--color-light);
+    }
+}

@@ -1,0 +1,28 @@
+.empty{
+    width: rem(500);
+    height: rem(250);
+    color: var(--color-light);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border: rem(1) solid var(--color-light-gray);
+    padding: rem(40);
+    border-radius: rem(14);
+
+    &__wrapper{
+        height: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__title{
+        font-size: rem(40);
+    }
+
+    &__btn{
+        width: 70%;
+    }
+}

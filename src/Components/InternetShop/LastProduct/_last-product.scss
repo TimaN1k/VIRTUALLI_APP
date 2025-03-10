@@ -1,0 +1,42 @@
+.last{
+    
+
+    &__wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        height: 100%; 
+        gap: rem(20);             
+    }
+
+    &__title{
+        font-size: rem(40);
+        font-family: var(--f-f-title);
+        text-transform: uppercase;
+        line-height: rem(40);
+    }
+
+    &__text{
+        font-size: rem(18);
+    }
+
+    &__btn{
+        text-align: center;        
+        max-width: rem(140);
+        font-size: rem(18);
+        padding: rem(10) rem(10);                
+    }
+
+    &__cardProd{       
+        justify-content: end; 
+        row-gap: rem(18);
+        padding: 0 0 rem(40) rem(80);       
+    }    
+}
+
+.htc-vive-img{
+    background-image: url('/img/HTCVivePro2.jpg');
+}
+
+.ps-img{
+    background-image: url('/img/PlayStationVR2.jpeg');
+}
