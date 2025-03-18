@@ -18,10 +18,17 @@ import { Route as IndexImport } from './routes/index'
 
 // Create Virtual Routes
 
+const FavoritesLazyImport = createFileRoute('/favorites')()
 const ContactLazyImport = createFileRoute('/contact')()
 const AboutLazyImport = createFileRoute('/about')()
 
 // Create/Update Routes
+
+const FavoritesLazyRoute = FavoritesLazyImport.update({
+  id: '/favorites',
+  path: '/favorites',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/favorites.lazy').then((d) => d.Route))
 
 const ContactLazyRoute = ContactLazyImport.update({
   id: '/contact',
@@ -79,6 +86,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactLazyImport
       parentRoute: typeof rootRoute
     }
+    '/favorites': {
+      id: '/favorites'
+      path: '/favorites'
+      fullPath: '/favorites'
+      preLoaderRoute: typeof FavoritesLazyImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -89,6 +103,7 @@ export interface FileRoutesByFullPath {
   '/bascet': typeof BascetRoute
   '/about': typeof AboutLazyRoute
   '/contact': typeof ContactLazyRoute
+  '/favorites': typeof FavoritesLazyRoute
 }
 
 export interface FileRoutesByTo {
@@ -96,6 +111,7 @@ export interface FileRoutesByTo {
   '/bascet': typeof BascetRoute
   '/about': typeof AboutLazyRoute
   '/contact': typeof ContactLazyRoute
+  '/favorites': typeof FavoritesLazyRoute
 }
 
 export interface FileRoutesById {
@@ -104,14 +120,15 @@ export interface FileRoutesById {
   '/bascet': typeof BascetRoute
   '/about': typeof AboutLazyRoute
   '/contact': typeof ContactLazyRoute
+  '/favorites': typeof FavoritesLazyRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/bascet' | '/about' | '/contact'
+  fullPaths: '/' | '/bascet' | '/about' | '/contact' | '/favorites'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/bascet' | '/about' | '/contact'
-  id: '__root__' | '/' | '/bascet' | '/about' | '/contact'
+  to: '/' | '/bascet' | '/about' | '/contact' | '/favorites'
+  id: '__root__' | '/' | '/bascet' | '/about' | '/contact' | '/favorites'
   fileRoutesById: FileRoutesById
 }
 
@@ -120,6 +137,7 @@ export interface RootRouteChildren {
   BascetRoute: typeof BascetRoute
   AboutLazyRoute: typeof AboutLazyRoute
   ContactLazyRoute: typeof ContactLazyRoute
+  FavoritesLazyRoute: typeof FavoritesLazyRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
@@ -127,6 +145,7 @@ const rootRouteChildren: RootRouteChildren = {
   BascetRoute: BascetRoute,
   AboutLazyRoute: AboutLazyRoute,
   ContactLazyRoute: ContactLazyRoute,
+  FavoritesLazyRoute: FavoritesLazyRoute,
 }
 
 export const routeTree = rootRoute
@@ -142,7 +161,8 @@ export const routeTree = rootRoute
         "/",
         "/bascet",
         "/about",
-        "/contact"
+        "/contact",
+        "/favorites"
       ]
     },
     "/": {
@@ -156,6 +176,9 @@ export const routeTree = rootRoute
     },
     "/contact": {
       "filePath": "contact.lazy.tsx"
+    },
+    "/favorites": {
+      "filePath": "favorites.lazy.tsx"
     }
   }
 }

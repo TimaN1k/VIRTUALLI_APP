@@ -7,6 +7,8 @@ import PersonIcon from '@mui/icons-material/Person';
 import { useFormStore } from '../../Store/FormStore';
 import { useProductBascet } from '../../Store/ProductBascet';
 import { Sort } from './SortProductInput/SortProduct';
+import { useFavoriteStore } from '../../Store/FavoriteStore';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 interface IheadAnimation extends Variants{
     hidden:{
@@ -34,7 +36,8 @@ export function Header(){
 
     const {isVis} = useFormStore()
     const {isActive, setActive} = useModalMenu() 
-    const { lengthProductInBascet, isEmpty } = useProductBascet()          
+    const { lengthProductInBascet, isEmpty } = useProductBascet()     
+    const { isEmptyinFavorite } = useFavoriteStore()     
 
     return(
         <motion.header custom={2} viewport={{once:true}} initial='hidden' whileInView='visible' variants={headAnimation} className="header">            
@@ -57,9 +60,14 @@ export function Header(){
                         </li>
                     </ul>
                     </nav>
-                    <div className="header__inner">  
-
+                    <div className="header__inner">
                         {/* В каждом компоненте иконки className = header__icon*/}
+                        { isEmptyinFavorite ? 
+                            <button type='button' className='btn-reset'>
+                                 <Link to='/favorites'>
+                                 <FavoriteIcon/>
+                                 </Link>
+                            </button> : <></>}
                         <button onClick={isVis} className="btn-reset">
                            <PersonIcon/>
                         </button>                                                        

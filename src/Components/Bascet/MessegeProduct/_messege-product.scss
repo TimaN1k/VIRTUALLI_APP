@@ -1,0 +1,38 @@
+@keyframes messegeImage {
+    0%{
+        top: -100%;
+    }
+    30%{
+        top: 40%;
+    }
+    40%{
+        top: 40%;
+    }    
+    50%{
+        top: 40%;
+    }
+    60%{
+        top: 40%;
+    }    
+    70%{
+        top: 40%;
+    }    
+    100%{
+        top: -100%;
+    }    
+}
+
+.messege{    
+    position: absolute;
+    left: 40%;
+    top: -100%;    
+    z-index: 100;
+    background-color: var(--color-light-gray);
+    border-radius: rem(4);
+    padding: rem(10);
+
+}
+
+.messege-ani{
+    animation: messegeImage ease-in-out 3s;    
+}
